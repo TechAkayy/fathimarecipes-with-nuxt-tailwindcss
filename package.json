@@ -14,6 +14,7 @@
     "lighthouse": "npx unlighthouse --no-cache --site https://fathimarecipes-with-nuxt-tailwindcss.netlify.app",
     "build": "npm-run-all --serial remote:tw:cls build-only",
     "build-only": "nuxt build",
+    "start": "node .output/server/index.mjs",
     "remote:tw:cls": "node scripts/remote-classes.js",
     "generate:types": "node ./scripts/generate-types.js",
     "generate": "nuxt generate",
