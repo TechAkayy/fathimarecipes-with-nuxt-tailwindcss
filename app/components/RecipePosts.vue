@@ -65,32 +65,51 @@
         :key="index"
         class="bg-white rounded-lg overflow-hidden shadow-lg"
       >
-        <NuxtLink :to="`${pgPost.slug}?id=${pgPost.id}`"
-          ><div class="relative h-64">
+        <NuxtLink :to="`${pgPost.slug}?id=${pgPost.id}`">
+          <div class="relative h-64">
             <img
               alt="Homemade Pasta"
               class="w-full h-full object-cover"
               :src="pgPost._embedded['wp:featuredmedia'][0].source_url"
             />
           </div>
-          <div class="p-6">
-            <p class="text-secondary-600 text-sm mb-2">
-              {{ pgPost.dateDisplay }}
-            </p>
-            <h3
-              class="font-serif text-2xl text-primary-800 mb-3"
-              v-html="pgPost.title.rendered"
-            ></h3>
-            <div
-              class="text-gray-600 mb-4"
-              v-html="pgPost.excerpt.rendered"
-            ></div>
-            <span
-              class="inline-block text-tertiary-700 hover:text-tertiary-800 font-medium"
-              >Read More →</span
-            >
-          </div></NuxtLink
-        >
+          <article
+            class="group relative rounded-2xl border border-zinc-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+          >
+            <div class="p-5 sm:p-6">
+              <p
+                class="text-secondary-600 text-xs sm:text-sm tracking-wide uppercase mb-2"
+              >
+                {{ pgPost.dateDisplay }}
+              </p>
+              <h3
+                class="font-serif text-xl sm:text-2xl text-primary-800 leading-snug mb-3"
+              >
+                <NuxtLink
+                  :to="pgPost.link"
+                  class="text-primary-800 hover:text-primary-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded"
+                >
+                  <span v-html="pgPost.title.rendered"></span>
+                </NuxtLink>
+              </h3>
+              <div
+                class="text-gray-600 text-sm sm:text-base leading-relaxed mb-5"
+                v-html="pgPost.excerpt.rendered"
+              ></div>
+              <NuxtLink
+                :to="pgPost.link"
+                class="inline-flex items-center gap-1.5 text-tertiary-700 hover:text-tertiary-800 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tertiary-500 rounded"
+              >
+                <span>Read More</span>
+                <span
+                  aria-hidden="true"
+                  class="transition-transform duration-300 group-hover:translate-x-0.5"
+                  >→</span
+                >
+              </NuxtLink>
+            </div>
+          </article>
+        </NuxtLink>
       </article>
     </div>
   </div>

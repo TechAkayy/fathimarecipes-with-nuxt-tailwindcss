@@ -56,11 +56,21 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@pinegrow/nuxt-module', '@unocss/nuxt', '@nuxt/content', '@vueuse/nuxt', '@pinia/nuxt', // '@nuxtjs/html-validator',
-    '@nuxt/image', '@vee-validate/nuxt', '@nuxtjs/seo', // '@nuxtjs/fontaine', // blocked by https://github.com/nuxt-modules/fontaine/issues/342
+  modules: [
+    '@pinegrow/nuxt-module',
+    '@unocss/nuxt',
+    '@nuxt/content',
+    '@vueuse/nuxt',
+    '@pinia/nuxt', // '@nuxtjs/html-validator',
+    '@nuxt/image',
+    '@vee-validate/nuxt',
+    '@nuxtjs/seo', // '@nuxtjs/fontaine', // blocked by https://github.com/nuxt-modules/fontaine/issues/342
     '@nuxtjs/critters', // '@nuxt/icon', // Enable once nuxt-icon is removed
     // To be replaced with @nuxt-icon (above), once NuxtSEO drops using this/becomes stable./becomes stable.
-    'nuxt-icon', '@nuxt/eslint', '@nuxt/scripts'],
+    'nuxt-icon',
+    '@nuxt/eslint',
+    '@nuxt/scripts',
+  ],
 
   // https://dev.to/jacobandrewsky/improving-performance-of-nuxt-with-fontaine-5dim
   // blocked by https://github.com/nuxt-modules/fontaine/issues/342
@@ -315,7 +325,7 @@ export default defineNuxtConfig({
         // restartOnThemeUpdate: true,
       },
       wordpress: {
-        // dataPath: false, // Set to false to turn off addition of data fetching composable(s) to the project. To customize the path, set to an absolute or relative path, default is 'data/pg-wordpress/query.ts'.                
+        // dataPath: false, // Set to false to turn off addition of data fetching composable(s) to the project. To customize the path, set to an absolute or relative path, default is 'data/pg-wordpress/query.ts'.
       },
       // plugins: [
       //   {

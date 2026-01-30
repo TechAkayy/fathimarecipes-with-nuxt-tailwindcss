@@ -18,7 +18,7 @@ export default {
     tailwindForms,
     tailwindCssPluginPinegrow({
       colors: pg_colors, // primary, secondary etc
-      fonts: getFontsWithFallback(pg_fonts),
+      fonts: pg_fonts,
       backgrounds: pg_backgrounds, // bg-design-image, bg-design-image-large
     }),
   ],

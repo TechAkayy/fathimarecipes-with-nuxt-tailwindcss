@@ -5,7 +5,7 @@ import { fontUrls } from '@/utils/font'
 
 import checkDarkTheme from '@/composables/dark-color-scheme-check?raw'
 import type { Script } from '@unhead/schema'
-import { useScript } from "@unhead/vue";
+import { useScript } from '@unhead/vue'
 type TurboScript = Script & { once: true }
 
 export const useHeadAndMeta = (pageMeta: ComputedRef) => {

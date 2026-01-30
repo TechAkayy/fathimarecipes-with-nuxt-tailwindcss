@@ -33,7 +33,6 @@ export default {
         to: '/about-me',
       },
     ],
-    secondary: [
-    ],
+    secondary: [],
   },
 }
